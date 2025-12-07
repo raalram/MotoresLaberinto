@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Transform player;
     public Cronometro cronometro;
     public TextMeshProUGUI textoLlegada;
+    public Button play;
 
     [Header("Entrada")]
     public GameObject puertaEntrada;
@@ -48,6 +50,11 @@ public class GameManager : MonoBehaviour
             textoLlegada.text = "";
         }
 
+        //Desactivo el botón 
+        if(play!=null)
+        {
+            play.gameObject.SetActive(false);
+        }
         // Reseteo el cronómetro
         if (cronometro != null)
         {

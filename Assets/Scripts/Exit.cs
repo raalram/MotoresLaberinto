@@ -6,7 +6,7 @@ public class Exit : MonoBehaviour
 {
     public Cronometro cronometro;        // referencia al script del cronómetro
     public TextMeshProUGUI textoLlegada; // texto del letrero final
-    public Button exit;
+    public Button play;
 
     bool activado = false;
 
@@ -27,7 +27,7 @@ public class Exit : MonoBehaviour
             {
                 textoLlegada.gameObject.SetActive(true);
                 textoLlegada.text = "¡¡Llegaste!!\nHas tardado " + tiempoTotal.ToString("F2") + " segundos";
-                exit.gameObject.SetActive(true);
+                play.gameObject.SetActive(true);
                
             }
         }
