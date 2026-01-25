@@ -12,7 +12,18 @@ public class Enemy : MonoBehaviour
 
         if (distancia<1)
         {
+            // SceneManager.LoadScene("GameOver");
+            transform.SetParent(null);
+            DontDestroyOnLoad(this.gameObject);
             SceneManager.LoadScene("GameOver");
+            Invoke("CargarEscena2", 3f);
         }
     }
+    void CargarEscena2()
+    {
+        SceneManager.LoadScene("Scene2");
+        Destroy(this.gameObject);
+    }
 }
+    
+
