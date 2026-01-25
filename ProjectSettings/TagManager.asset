@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - OpenDoor
+  - Floor
   layers:
   - Default
   - TransparentFX
